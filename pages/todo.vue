@@ -17,7 +17,8 @@ export default {
   },
   methods: {
     addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
+      this.$store.dispatch('todos/add',e.target.value)
+      // this.$store.commit('todos/add', e.target.value)
       e.target.value = ''
     },
     ...mapMutations({
