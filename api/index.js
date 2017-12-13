@@ -8,7 +8,6 @@ export const HOST = "https://mykrystal.com"
 const GET_URLS = {
     fetchSubjectList:HOST+"/cms/fetchSubjectList",
     fetchSubject:HOST+"/cms/fetchSubject",
-    getShopBoard:HOST+"/joy/merchant/getshopboard",
     fetchUserList:HOST+"/cms/fetchUserList",
     fetchTotalTopics:HOST+"/cms/fetchSubjectList",
     logout:HOST+"/cms/logout"

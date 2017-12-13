@@ -12,6 +12,7 @@
 import { mapMutations } from 'vuex'
 
 export default {
+ 
   computed: {
     todos () { return this.$store.state.todos.list }
   },

@@ -36,6 +36,23 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
+
+  modules: [
+    '@nuxtjs/axios',
+  ],
+
+  axios: {
+    init(axios, ctx) {
+      axios.defaults.xsrfHeaderName = 'X-CSRF-TOKEN'
+    },
+    requestInterceptor: (config, { store }) => {
+      if (store.state.token) {
+        config.headers.common['Authorization'] = store.state.token
+      }
+      return config
+    }
+    // proxyHeaders: false
+  },
   build: {
     extend (config) {
       // config.module.rules.forEach((rule) => {
