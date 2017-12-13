@@ -5,7 +5,7 @@
   "author": "yursile <kuangyu02@meituan.com>",
   "private": true,
   "scripts": {
-    "dev": "backpack dev",
+    "dev": "backpack dev --inspect=22345",
     "build": "nuxt build && backpack build",
     "start": "cross-env NODE_ENV=production node build/main.js",
     "precommit": "npm run lint",
@@ -15,7 +15,7 @@
     "axios": "^0.17.1",
     "cross-env": "^5.0.1",
     "koa": "^2.4.1",
-    "mjsj-api": "^1.0.6",
+    "mjsj-api": "^1.0.10",
     "nuxt": "^1.0.0-rc11",
     "source-map-support": "^0.4.15"
   },

@@ -1,5 +1,5 @@
 import axios from "axios"
-import {get, all, local} from "./tool"
+import {get, all, local} from "mjsj-api"
 
 
 // import * as db from "./db.js"

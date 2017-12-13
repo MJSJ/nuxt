@@ -72,6 +72,21 @@ module.exports =
 /* 0 */
 /***/ function(module, exports) {
 
+function isJSRule(rule) {
+  return ['/\\.js$/', '/\\.es6$/'].indexOf(rule.test.toString()) !== -1;
+}
+
+const ES6Loader = {
+  //jsx、es6、es7兼容性
+  // test: /\.(es6|jsx|js)$/,
+  // exclude: /node_modules\/(?!(@gfe|@dp))/,
+  loader: 'babel-loader'
+  // query: {
+  //   presets: [ 'es2015', 'stage-0']
+
+  // }
+};
+
 module.exports = {
   /*
   ** Headers of the page
@@ -88,7 +103,25 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' }
+  loading: { color: '#3B8070' },
+  build: {
+    extend(config) {
+      // config.module.rules.forEach((rule) => {
+      //     if (isJSRule(rule)) {
+      //       rule.include = /node_modules\/mjsj-api/
+      //       console.log(rule)
+      //     }
+      // })
+      // config.module.rules.push({
+      //   test: /\.js$/,
+      //   exclude:/node_modules\/?!mjsj-api/,
+      //   loader: 'babel-loader',
+      //   options:{
+      //     presets:["babel-preset-vue-app"]
+      //   }
+      // });
+    }
+  }
 };
 
 /***/ },
